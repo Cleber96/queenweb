@@ -3,38 +3,34 @@ package uni.devsoft.queenweb.controllers;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StreamUtils;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 
 import java.io.IOException;
-import java.io.InputStream;
 
 @RestController //@Controller
 public class UserController {
 
     @RequestMapping
     public ResponseEntity<byte[]> getInit() {
-        return getFileContent("templates/login.html");
+        return getFileContent("static/login.jsp");
     }
     @RequestMapping("/login")
     public ResponseEntity<byte[]> getLogin() {
-        return getFileContent("templates/login.html");
+        return getFileContent("static/login.jsp");
     }
 
     @RequestMapping("/register")
     public ResponseEntity<byte[]> getRegister() {
-        return getFileContent("templates/register.html");
+        return getFileContent("static/register.jsp");
     }
 
     @RequestMapping("/board")
     public ResponseEntity<byte[]> getBoard() {
-        return getFileContent("templates/board.html");
+        return getFileContent("static/board.jsp");
     }
 
     private ResponseEntity<byte[]> getFileContent(String filePath) {

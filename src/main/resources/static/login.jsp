@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .contenido {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenido">
+        <h1>QUEEN WEB</h1>
+        <h3>Iniciar Sesión</h3>
+        <form action="board" method="post">
+            <label for="usuario">Usuario:</label><br>
+            <input type="text" id="usuario" name="usuario" required><br>
+            <label for="contrasena">Contraseña:</label><br>
+            <input type="password" id="contrasena" name="contrasena" required><br><br>
+            <input type="submit" value="Ingresar">
+        </form>
+        <p>¿No tienes una cuenta? <a href="register">Registrarse</a></p>
+    </div>
+</body>
+</html>
