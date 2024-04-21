@@ -1,5 +1,5 @@
 FROM amazoncorretto:17-alpine-jdk
 
-COPY  target/queenweb-0.0.1-SNAPSHOT.war app.war
+COPY  target/queenweb-0.0.1-SNAPSHOT.war app.jar
 
-ENTRYPOINT ["java", "-war", "/app.war"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
