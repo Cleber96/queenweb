@@ -15,25 +15,24 @@ import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBo
 import java.io.IOException;
 import java.io.InputStream;
 
-@RestController
+@RestController //@Controller
 public class UserController {
 
-    @GetMapping(value = "/", produces = MediaType.TEXT_HTML_VALUE)
+    @RequestMapping
     public ResponseEntity<byte[]> getInit() {
         return getFileContent("templates/login.html");
     }
-
-    @GetMapping(value = "/login", produces = MediaType.TEXT_HTML_VALUE)
+    @RequestMapping("/login")
     public ResponseEntity<byte[]> getLogin() {
         return getFileContent("templates/login.html");
     }
 
-    @GetMapping(value = "/register", produces = MediaType.TEXT_HTML_VALUE)
+    @RequestMapping("/register")
     public ResponseEntity<byte[]> getRegister() {
         return getFileContent("templates/register.html");
     }
 
-    @GetMapping(value = "/board", produces = MediaType.TEXT_HTML_VALUE)
+    @RequestMapping("/board")
     public ResponseEntity<byte[]> getBoard() {
         return getFileContent("templates/board.html");
     }
